@@ -1,0 +1,32 @@
+body {
+    font-family: "Comic Sans MS", sans-serif;
+    vertical-align: top;
+    background-image: url("http://a1.files.biography.com/image/upload/c_fit,cs_srgb,dpr_1.0,h_1200,q_80,w_1200/MTE4MDAzNDEwMTY1NTk3NzEw.jpg");
+}
+
+td {
+    vertical-align: top;
+}
+
+
+table {
+    margin-bottom: 18px;
+    font-family: "Impact", sans-serif;
+}
+
+
+button {
+    font-size: 30px;
+    font-family: "Impact", sans-serif;
+}
+
+
+div {
+    margin: 10px 0px;
+}
+
+#letter{
+    font-size: 600px;
+    font-family: "Impact", sans-serif;
+
+}
