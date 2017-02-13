@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title></title>
     <script src="code.js"></script>
+    <script src="code2.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,8 +24,9 @@
 
     <td>
         <select id="coast">
-            <option value="1">true</option>
-            <option value="0">false</option>
+            <option value="a">--Do You Like The Coast?--</option>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
         </select>
 
 </tr>
@@ -32,8 +34,11 @@
 <tr>
 
     <td>
-        <select id="letter">
-            <option value="a">A</option>
+        <select id="politics">
+            <option value="a">--What Political Preference Do You Have?--</option>
+            <option value="liberal">liberal</option>
+            <option value="conservative">conservative</option>
+            <option value="swing">swing</option>
         </select>
 
 </tr>
@@ -41,8 +46,11 @@
 <tr>
 
     <td>
-        <select id="letter">
-            <option value="a">A</option>
+        <select id="weather">
+            <option value="a">--What Weather Do You Prefer?--</option>
+            <option value="hot">hot</option>
+            <option value="cold">cold</option>
+            <option value="varied">varied</option>
         </select>
 
 </tr>
@@ -50,8 +58,10 @@
 <tr>
 
     <td>
-        <select id="letter">
-            <option value="a">A</option>
+        <select id="bigcity">
+            <option value="a">--Would You Like To Live In A Large City?--</option>
+            <option value="true">yes</option>
+            <option value="false">no</option>
         </select>
 
 </tr>
@@ -59,13 +69,16 @@
 <tr>
 
     <td>
-        <select id="letter">
-            <option value="a">A</option>
+        <select id="diversity">
+            <option value="a">--What Level Of Divercity Would You Like?--</option>
+            <option value="high">high</option>
+            <option value="medium">medium</option>
+            <option value="low">low</option>
         </select>
 
 </tr>
 
-<button onclick="pickRandom()">Submit</button>
+<button onclick="run()">Submit</button>
 
 
 
