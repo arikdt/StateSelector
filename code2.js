@@ -56,15 +56,14 @@ function run2() {
     }
     var diver = document.getElementById("diversity").value;
 
-    var c = stateArray[i].coast;
-    var p = stateArray[i].politics;
-    var w = stateArray[i].weather;
-    var b = stateArray[i].bigcity;
-    var d = stateArray[i].diversity;
-
     var which = prompt("Which of the criteria do you care about the least?", "");
 
     for (var i = 0; i < stateArray.length; i++) {
+        var c = stateArray[i].coast;
+        var p = stateArray[i].politics;
+        var w = stateArray[i].weather;
+        var b = stateArray[i].bigcity;
+        var d = stateArray[i].diversity;
         if (which == "coast") {
                 if (p == pol && w == weather && b == city && d == diver){
                   console.log(stateArray[i].name);
