@@ -114,9 +114,9 @@ var wyoming = new State(49, "wyoming", false, "conservative", "cold", false, "lo
 
 var washingtonDC = new State(50, "washington D.D.", false, "liberal", "varied", true, "high");
 
-var puertoRico = new State(51, "puerto rico", true, "apolitical", "hot", false, "high");
+var puertoRico = new State(51, "puerto rico", true, "conservative", "hot", false, "high");
 
-var guam = new State(52, "guam", true, "apolitical", "hot", false, "high");
+var guam = new State(52, "guam", true, "liberal", "liberal", false, "high");
 
 console.log(stateArray);
 

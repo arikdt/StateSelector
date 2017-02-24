@@ -22,15 +22,25 @@ function run() {
 
     for (var i = 0; i < stateArray.length; i++) {
 
-    if (stateArray[i].coast == coast && stateArray[i].politics == pol && stateArray[i].weather == weather && stateArray[i].bigcity == city && stateArray[i].diversity == diver) {
-            possibleArray = possibleArray + stateArray[i].name;
+        var c = stateArray[i].coast;
+        var p = stateArray[i].politics;
+        var w = stateArray[i].weather;
+        var b = stateArray[i].bigcity;
+        var d = stateArray[i].diversity;
+
+    if (c == coast && p == pol && w == weather && b == city && d == diver) {
+        possibleArray.push(stateArray[i].name);
         }
     }
 
     if (possibleArray.length == 0) {
         run2();
     } else {
-        console.log(possibleArray);
+        if (possibleArray.length != 1) {
+            console.log(possibleArray[0]);
+        } else {
+            console.log(possibleArray);
+        }
     }
 }
 
@@ -56,35 +66,44 @@ function run2() {
     }
     var diver = document.getElementById("diversity").value;
 
-    var which = prompt("Which of the criteria do you care about the least?", "");
+    var which = prompt("Which of the criteria do you care about the least? Weather, politics, bigcity, weather, diversity", "");
 
     for (var i = 0; i < stateArray.length; i++) {
+
         var c = stateArray[i].coast;
         var p = stateArray[i].politics;
         var w = stateArray[i].weather;
         var b = stateArray[i].bigcity;
         var d = stateArray[i].diversity;
+
         if (which == "coast") {
-                if (p == pol && w == weather && b == city && d == diver){
-                  console.log(stateArray[i].name);
+            if (p == pol && w == weather && b == city && d == diver){
+                possibleArray.push(stateArray[i].name);
                 }
         } else if (which == "politics") {
             if (c == coast && w == weather && b == city && d == diver) {
-                console.log(stateArray[i].name);
+                possibleArray.push(stateArray[i].name);
             }
         } else if (which == "weather") {
             if (c == coast && p == pol && b == city && d == diver) {
-                console.log(stateArray[i].name);
+                possibleArray.push(stateArray[i].name);
             }
         } else if (which == "bigcity") {
             if (c == coast && p == pol && w == weather && d == diver) {
-                console.log(stateArray[i].name);
+                possibleArray.push(stateArray[i].name);
             }
         } else if (which == "diversity") {
             if (c == coast && p == pol && w == weather && b == city) {
-                console.log(stateArray[i].name);
+                possibleArray.push(stateArray[i].name);
             }
         }
+        }
+        if (possibleArray.length >= 1) {
+            console.log(possibleArray[0]);
+        } else if (possibleArray.length == 0) {
+            console.log("No state currently matches your criteria, however, Hawaii is lovely this time of year, how about trying that? The lack of stress would probably be good for your heart. Don't believe me? Ask your doctor. Don't care about your health?. Fine. But its nice there anyway so you should still go.");
+        } else {
+            console.log(possibleArray);
         }
     }
 
