@@ -4,6 +4,10 @@ function run() {
 
     possibleArray = [];
 
+    if (document.getElementById("island").value == true) {
+        islandPlace();
+    }
+
     var coast = document.getElementById("coast").value;
     if (coast == "false") {
         coast = (coast == "false");
